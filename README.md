@@ -1,15 +1,10 @@
-# A Laravel Nova tool to send posts to Buffer.
+# A Laravel Nova tool to send posts to Buffer
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ahmic/nova-to-buffer.svg?style=flat-square)](https://packagist.org/packages/ahmic/nova-to-buffer)
-![CircleCI branch](https://img.shields.io/circleci/project/github/ahmic/nova-to-buffer/master.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/ahmic/nova-to-buffer/master.svg?style=flat-square)](https://travis-ci.org/ahmic/nova-to-buffer)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ahmic/nova-to-buffer.svg?style=flat-square)](https://scrutinizer-ci.com/g/ahmic/nova-to-buffer)
-[![Total Downloads](https://img.shields.io/packagist/dt/ahmic/nova-to-buffer.svg?style=flat-square)](https://packagist.org/packages/ahmic/nova-to-buffer)
+Tired of manually posting links to social networks? This package enables "one click" posting to social networks from Nova dashboard, through [Buffer](https://buffer.com) service.
 
-
-This is where your description should go. Try and limit it to a paragraph or two.
-
-Add a screenshot of the tool here.
+> [Buffer](https://buffer.com) is a software application for the web and mobile, designed to manage accounts in social networks, by providing the means for a user to schedule posts to Twitter, Facebook, Instagram, and Linkedin, as well as analyze their results and engage with their community. [Wikipedia](https://en.wikipedia.org/wiki/Buffer_(application))
+> 
+> They offer a free plan for one user and up to three social accounts
 
 ## Installation
 
@@ -19,35 +14,44 @@ You can install the package in to a Laravel app that uses [Nova](https://nova.la
 composer require ahmic/nova-to-buffer
 ```
 
-Next up, you must register the tool with Nova. This is typically done in the `tools` method of the `NovaServiceProvider`.
+## Usage
 
-```php
-// in app/Providers/NovaServiceProvider.php
+**1.**  Add Buffer access token and profile id(s) to the Laravel's `config/services.php` file
+```
+// ...
+
+'buffer' => [
+    'access_token' => env('BUFFER_ACCESS_TOKEN'),
+    'profile_ids' => env('BUFFER_PROFILE_IDS')
+]
+```
+**2.** To enable share component for specific model, you'll need to add the tool to that model's Nova resource. Make sure to specify the class name so the resource tool can load it properly. 
+
+Replace `_URL_` with publicly accessible url for your model. 
+
+```
+use Ahmic\NovaToBuffer\NovaToBuffer;
 
 // ...
 
-public function tools()
-{
-    return [
-        // ...
-        new \Ahmic\NovaToBuffer\Tool(),
-    ];
-}
+NovaToBuffer::make()
+    ->url(_URL_)
 ```
 
-## Usage
-
-Click on the "nova-to-buffer" menu item in your Nova app to see the tool provided by this package.
-
-## Testing
-
-``` bash
-composer test
-```
+>Example `config('app.url').'/posts/'.$this->slug` to get `https://yourdomain.com/posts/model-slug` Construct it according to your url scheme.
+>
+**3.** All set! Visit detail screen of your model resource, populate fields and click "Send update".
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Plans
+
+- [ ] Option for automatic posting
+- [ ] Selecting social channels to post
+- [ ] Multiple text input fields for different social channels
+- [ ] Scheduling
 
 ## Contributing
 
