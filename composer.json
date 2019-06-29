@@ -1,0 +1,48 @@
+{
+    "name": "ahmic/nova-to-buffer",
+    "description": "A Laravel Nova tool to send posts to Buffer.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "buffer"
+    ],
+    "homepage": "https://github.com/ahmic/nova-to-buffer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amir Ahmic",
+            "email": "am1r.root@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/nova": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ahmic\\NovaToBuffer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ahmic\\NovaToBuffer\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ahmic\\NovaToBuffer\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
