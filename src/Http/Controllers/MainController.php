@@ -55,7 +55,6 @@ class MainController extends Controller {
         }
         $postDataIds = implode('&', $postDataIds);
         $postData = http_build_query($postData).'&'.$postDataIds;
-        // dd($postData);
 
         try {
             $responseData = json_decode($this->makePostRequest($postData));

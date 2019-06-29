@@ -42,6 +42,11 @@ NovaToBuffer::make()
 >
 **3.** All set! Visit detail screen of your model resource, populate fields and click "Send update".
 
+## Screenshots
+![Post screen](https://i.imgur.com/qswY1hU.png)
+
+![Success](https://i.imgur.com/r74Yknv.png)
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
