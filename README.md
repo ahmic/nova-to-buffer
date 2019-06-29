@@ -25,6 +25,12 @@ composer require ahmic/nova-to-buffer
     'profile_ids' => env('BUFFER_PROFILE_IDS')
 ]
 ```
+
+.env example
+```
+BUFFER_PROFILE_IDS="5d13f781311f3c645456771e,5d1540124a12c7tr141dbd22"
+BUFFER_ACCESS_TOKEN="1/34443f37tgf907fc1051e0d635e53b1e"
+```
 **2.** To enable share component for specific model, you'll need to add the tool to that model's Nova resource. Make sure to specify the class name so the resource tool can load it properly. 
 
 Replace `_URL_` with publicly accessible url for your model. 
