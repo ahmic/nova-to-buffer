@@ -132,7 +132,6 @@
 import IconBuffer from './iconbuffer'
 import IconExternal from './iconexternal'
 import IconDown from './icondown'
-import Preview from './preview'
 
 export default {
     props: ['resourceName', 'resourceId', 'field', 'panel'],
@@ -143,7 +142,6 @@ export default {
             publishnow: false,
             processing: false,
             response: null,
-            responsed: {"updates":[{"_id":"5d16a867258cc50d7757a142","client_id":"5d13f8aad267c037bb2069a2","created_at":1561765991,"day":"No scheduled days or times","due_at":0,"due_time":"-","id":"5d16a867258cc50d7757a142","is_video_processing":false,"library_update_id":"","needs_approval":false,"organization_id":"5d13f7391366d5346f3c1125","perm_approvable":false,"perm_editable":true,"pinned":false,"profile_id":"5d1540122a12ce0b141dbd22","profile_service":"twitter","shared_now":false,"status":"buffer","text":"https://itbase.ba/vijesti/1342/otvorene-prijave-za-regionalni-elevator-lab-challenge","text_formatted":"<a class=\"url\" href=\"https://itbase.ba/vijesti/1342/otvorene-prijave-za-regionalni-elevator-lab-challenge\" rel=\"external nofollow\" target=\"_blank\">https://itbase.ba/vijesti/1342/otvorene-prijave-za-regionalni-elevator-lab-challenge</a>","text_md5":"0b42fc9e6f39da4343518f38208b767a","type":"link","updated_at":1561765991,"user_id":"5d13f7391366d5346f3c1124","via":"api","service_link":""},{"_id":"5d16a868258cc50d7757a143","client_id":"5d13f8aad267c037bb2069a2","created_at":1561765992,"day":"No scheduled days or times","due_at":0,"due_time":"-","id":"5d16a868258cc50d7757a143","is_video_processing":false,"library_update_id":"","media":{"link":"https://itbase.ba/vijesti/1342/otvorene-prijave-za-regionalni-elevator-lab-challenge","title":"Otvorene prijave za regionalni Elevator Lab Challenge | IT Base","description":"Raiffeisen Bank dd Bosna i Hercegovina objavila je službeni početak regionalnog projekta za startupe u oblasti finansijskih tehnologija, \"Elevator Lab Challenge\", koji je dio međunarodnog Elevator...","expanded_link":"https://itbase.ba/vijesti/1342/otvorene-prijave-za-regionalni-elevator-lab-challenge","preview":"https://itbase.ba/storage/img/posts/8305a1b4-55dc-48a2-931b-e94ad6efe5b9.png"},"needs_approval":false,"organization_id":"5d13f7391366d5346f3c1125","perm_approvable":false,"perm_editable":true,"pinned":false,"profile_id":"5d13f781311f3c63c430771e","profile_service":"facebook","shared_now":false,"status":"buffer","text":"","text_formatted":"","text_md5":"0b42fc9e6f39da4343518f38208b767a","type":"link","updated_at":1561765992,"user_id":"5d13f7391366d5346f3c1124","via":"api"}],"buffer_percentage":10,"buffer_count":1,"success":true,"message":"One more post in your Buffer. Keep it topped up!","code":false},
             status: null,
             message: ''
         }
